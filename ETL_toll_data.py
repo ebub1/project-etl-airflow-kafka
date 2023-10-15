@@ -87,11 +87,3 @@ transform_data = BashOperator(
 # task pipeline
 
 unzip_data >> extract_data_from_csv >> extract_data_from_tsv >> extract_data_from_fixed_width >> consolidate_data >> transform_data
-
-
-tar -xvzf /home/project/airflow/dags/finalassignment/tolldata.tgz
-cut -f 1,2,3,4 -d "," /home/project/airflow/dags/finalassignment/vehicle-data.csv > /home/project/airflow/dags/finalassignment/csv_data.csv 
-cut -f 5,6,7 /home/project/airflow/dags/finalassignment/tollplaza-data.tsv > /home/project/airflow/dags/finalassignment/tsv_data.csv
-cut -c 59-62, 63-68 /home/project/airflow/dags/finalassignment/payment-data.txt > sed -i 's/ \+/,/g' /home/project/airflow/dags/finalassignment/fixed_width_data.csv
-tr -f 3 d"," "[a-z]" "[A-Z]" < /home/project/airflow/dags/finalassignment/extracted_data.csv > /home/project/airflow/dags/transformed_data.csv
-awk 'BEGIN {FS=OFS=","} { $3 = toupper($3) } 1' /home/project/airflow/dags/finalassignment/extracted_data.csv > /home/project/airflow/dags/finalassignment/transformed_data.csv
