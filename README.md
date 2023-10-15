@@ -37,11 +37,32 @@ As a vehicle passes a toll plaza, the vehicle's data like vehicle_id,vehicle_typ
 
   6. Submit DAG and check:
      
-<img width="1072" alt="image" src="https://github.com/ebub1/project-etl-airflow-kafka/assets/121383182/23a6c44d-a1ef-4771-a8f9-5e5968b04c8f">
+<img width="1071" alt="image" src="https://github.com/ebub1/project-etl-airflow-kafka/assets/121383182/1d7f3cc3-2b6c-4858-a37f-c2fae4204069">
 
   8. Unpause DAG and monitor:
      
-<img width="1861" alt="image" src="https://github.com/ebub1/project-etl-airflow-kafka/assets/121383182/c394bc29-88d6-4800-8fe3-8df68bd57dd1">
+<img width="1861" alt="image" src="https://github.com/ebub1/project-etl-airflow-kafka/assets/121383182/b345a0f4-3744-4d14-a466-8e0561429fb2">
+
+
+__Module 2: Creating Streaming Data Pipelines using Kafka__
+
+  1. Start Zookeper:
+![2 1_start_zookeeper](https://github.com/ebub1/project-etl-airflow-kafka/assets/121383182/c16090c0-f41b-4ae3-93d5-a06afa5a2a97)
+
+  2. Start Kafka server:
+![2 2_start_kafka_server](https://github.com/ebub1/project-etl-airflow-kafka/assets/121383182/4533d7ea-31c5-43fc-aa95-fecbfd425102)
+
+  3. Create a topic named toll:
+![2 3_create_toll_topic](https://github.com/ebub1/project-etl-airflow-kafka/assets/121383182/fb5e2363-8d8f-4b85-8bd9-aba840851234)
+
+  4. Data generates bby toll_traffic_generator:
+![2 6_simulator_output](https://github.com/ebub1/project-etl-airflow-kafka/assets/121383182/d76702f9-2b12-4421-9a1f-a85f6512e374)
+
+  5. Data streams by streaming_data_reader.py:
+![2 8_data_reader_output](https://github.com/ebub1/project-etl-airflow-kafka/assets/121383182/70e0430c-c49f-485d-8105-e66d9c3eb0c2)
+
+  6. Health check of the streaming data pipeline:
+![2 9_output_rows](https://github.com/ebub1/project-etl-airflow-kafka/assets/121383182/f11c15a4-5aab-44c9-9209-1bd0d62e54bb)
 
 
 
